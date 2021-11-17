@@ -4,7 +4,6 @@ export const appointmentDatas = [
 		title: 'Christy Schumm',
 		timezone: 'Australia/Sydney',
 		day_of_week: 'Monday',
-		// eslint-disable-next-line
 		startDate: new Date(2021, 11, 6, 9, 0),
 		endDate: new Date(2021, 11, 6, 17, 30),
 	},
