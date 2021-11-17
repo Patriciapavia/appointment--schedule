@@ -6,4 +6,6 @@ export const fetchDataAction = () => (dispatch) => {
 		type: FETCH_DATA_SUCCESS,
 		payload: appointmentDatas,
 	});
+	 localStorage.setItem('appointmentDatas', JSON.stringify(appointmentDatas));
+
 };

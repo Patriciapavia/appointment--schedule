@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Paper, Button } from '@material-ui/core';
+import React from 'react';
+import { Paper } from '@material-ui/core';
 import { useParams } from 'react-router-dom';
 import { FlexibleSpace } from '../utils/commonUtils';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { ViewState, EditingState } from '@devexpress/dx-react-scheduler';
 import {
 	Scheduler,
@@ -16,17 +16,11 @@ import {
 	DragDropProvider,
 } from '@devexpress/dx-react-scheduler-material-ui';
 
-import { fetchDataAction } from '../actions/appointmentTimeAction';
-
 const AvailableTimeAppointment = () => {
 	const { id } = useParams();
-	const dispatch = useDispatch();
+
 	const appointmentLists = useSelector((state) => state.appointmentLists);
 	const datas = appointmentLists.datas;
-
-	useEffect(() => {
-		dispatch(fetchDataAction());
-	}, [dispatch]);
 
 	const commitChanges = () => {};
 	let newData = [];
